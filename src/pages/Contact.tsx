@@ -7,6 +7,15 @@ import supportPhoto from "../assets/contact-support-photo.webp";
 import officeIcon from "../assets/contact-icon-office.png";
 import phoneIcon from "../assets/contact-icon-phone.png";
 import mailIcon from "../assets/contact-icon-mail.png";
+import type { ContactFormData } from "../types";
+
+// An empty form - used at the start and to clear the form after after submission.
+const emptyForm: ContactFormData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 const fields = [
   { label: "Name", placeholder: "Your Name", type: "text" },
