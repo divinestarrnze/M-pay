@@ -10,12 +10,6 @@ import mailIcon from "../assets/contact-icon-mail.png";
 import type { ContactFormData } from "../types";
 
 // An empty form - used at the start and to clear the form after after submission.
-const emptyForm: ContactFormData = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-};
 
 const fields = [
   { label: "Name", placeholder: "Your Name", type: "text" },
@@ -58,7 +52,11 @@ const Contact = () => {
           <ul className="mt-10.75">
             <li className="grid grid-cols-[131px_1fr] items-start">
               <span className="size-23.5 rounded-full bg-[#7D72FF] flex items-center justify-center">
-                <img src={officeIcon} alt="" className="w-13.5 -translate-y-1" />
+                <img
+                  src={officeIcon}
+                  alt=""
+                  className="w-13.5 -translate-y-1"
+                />
               </span>
               <div className="pt-0.75">
                 <h3 className="font-semibold text-[#7D72FF] text-[22px] leading-6.25">
@@ -73,7 +71,11 @@ const Contact = () => {
 
             <li className="mt-9.5 grid grid-cols-[131px_1fr] items-start">
               <span className="size-23.5 rounded-full bg-[#7D72FF] flex items-center justify-center">
-                <img src={phoneIcon} alt="" className="w-13 -translate-y-0.75" />
+                <img
+                  src={phoneIcon}
+                  alt=""
+                  className="w-13 -translate-y-0.75"
+                />
               </span>
               <div className="pt-1">
                 <h3 className="font-semibold text-[#7D72FF] text-[22px] leading-6.25">
@@ -87,7 +89,11 @@ const Contact = () => {
 
             <li className="mt-13 grid grid-cols-[131px_1fr] items-start">
               <span className="ml-2 size-23.5 rounded-full bg-[#7D72FF] flex items-center justify-center">
-                <img src={mailIcon} alt="" className="w-11.25 -translate-y-0.75" />
+                <img
+                  src={mailIcon}
+                  alt=""
+                  className="w-11.25 -translate-y-0.75"
+                />
               </span>
               <div className="pt-1.25">
                 <h3 className="font-semibold text-[#7D72FF] text-[22px] leading-6.25">
@@ -108,7 +114,10 @@ const Contact = () => {
 
           <div className="sm:pl-3">
             {fields.map(({ label, placeholder, type }, i) => (
-              <label key={label} className={`block ${i === 0 ? "mt-13.5" : "mt-12.5"}`}>
+              <label
+                key={label}
+                className={`block ${i === 0 ? "mt-13.5" : "mt-12.5"}`}
+              >
                 <span className="block pl-0.5 font-semibold text-[rgba(255,255,255,0.75)] text-[22px] leading-none">
                   {label} <span className="text-[#7D72FF]">*</span>
                 </span>
